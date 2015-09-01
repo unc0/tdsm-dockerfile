@@ -1,4 +1,4 @@
-This is a fork of [parkervcp/tdsm](https://github.com/parkervcp/dockerfiles/blob/master/alpine/tdsm/tdsm-b4-Dockerfile).
+This is a fork of [parkervcp/tdsm](https://github.com/parkervcp/dockerfiles/blob/master/alpine/tdsm/tdsm-latest-Dockerfile).
 
 You can setup tdsm via environment variables. There is a python twisted powered simple ftp for backup/sync Worlds/Data, you can set password via environment variables too.
 
