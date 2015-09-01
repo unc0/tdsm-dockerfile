@@ -6,15 +6,14 @@ RUN echo "http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositorie
  && apk update \
  && apk add mono openssl bash py-twisted
 
-ADD tdsm-build-5.zip /tmp/
-
 VOLUME /srv/tdsm/Worlds
 VOLUME /srv/tdsm/Data
 EXPOSE 7777 7023 2112
 
 RUN mkdir -p /srv/tdsm /srv/tdsm/Worlds \
- && unzip /tmp/tdsm-build-5.zip -d /srv/tdsm  \
- && rm /tmp/tdsm-build-5.zip
+ && wget https://github.com/DeathCradle/Terraria-s-Dedicated-Server-Mod/releases/download/Build-5/tdsm-build-5.zip \
+ && unzip tdsm-build-5.zip -d /srv/tdsm  \
+ && rm tdsm-build-5.zip
 
 WORKDIR /srv/tdsm
 
